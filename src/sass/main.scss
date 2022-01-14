@@ -3,13 +3,24 @@
  * Все паршалы подключаются сюда.
  */
 
-// Стили для файла с примером HTML-фрагмента
-
 @import './base/reset';
 
 @import './utils/vars';
 @import './utils/common';
 @import './utils/visually-hidden';
 @import './utils/mixin';
+@import './utils/placeholder';
 
 @import './components/container';
+@import './components/buttons';
+@import './components/mobile-menu';
+@import './components/modal';
+@import './components/header';
+@import './components/hero';
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/customer-reviews';
+@import './components/contacts';
+@import './components/footer';
