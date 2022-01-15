@@ -1,35 +1,42 @@
 .hero {
   position: relative;
-  display: block;
-  padding-top: 27px;
-  background-color: #ffb8ca;
-  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 184, 202, 1);
+  z-index: -3;
 
   &::after {
     content: '';
     position: absolute;
     display: block;
-    z-index: -1;
-    top: 27px;
-    left: 36px;
-    width: 345px;
-    height: 345px;
+    z-index: -2;
+    top: 83px;
+    left: 15%;
+    min-width: 345px;
+    min-height: 345px;
     border-radius: 50%;
-    background-color: #ffa5ba;
+    background-color: rgba(255, 165, 186, 1);
+  }
+  .hero__container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/hero-header/header-ice-cream-mob-1x.png);
+    background-repeat: no-repeat;
+    background-position: left 75% bottom 0px;
+    z-index: -1;
   }
 
   .hero__btn-products {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
     margin-right: 8px;
-    display: inline-block;
     @include font(8px, 1.25, 0.04em, 400);
     padding: 9px 15px;
     border-radius: 20px;
     border: 0px;
-    text-decoration: none;
     border-color: transparent;
     background-color: #d41443;
     color: #ffffff;
@@ -39,7 +46,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
     @include font(8px, 1.25, 0.04em, 400);
     padding: 9px 15px;
     border-radius: 20px;
@@ -51,9 +57,6 @@
   }
 }
 .title {
-  margin-left: 0;
-  margin-top: 137px;
-  margin-right: 82px;
   margin-bottom: 20px;
   @include font(26px, 1.15, 0.04em, 400);
   font-family: Titan One;
