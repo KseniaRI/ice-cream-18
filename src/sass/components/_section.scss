@@ -1,0 +1,13 @@
+.section__title {
+  @include font(34px, 1.15, 0.04em, 400);
+  text-transform: uppercase;
+  width: 200px;
+  color: #d41443;
+}
+.section__pre-title {
+  font-family: Titan One;
+  @include font(18px, 1.17, 0.02em, 400);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #ffa5ba;
+}
