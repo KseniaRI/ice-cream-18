@@ -1,0 +1,115 @@
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+  text-align: center;
+}
+.products__title {
+  @include font(34px, 1.15, 0.04em, 400);
+  text-transform: uppercase;
+  color: $accent-color;
+}
+.products__heading {
+  margin-bottom: 144px;
+}
+.products__list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.products__item {
+  margin-bottom: 129px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.products__link {
+  text-decoration: none;
+}
+
+.product__box {
+  position: relative;
+  width: 280px;
+}
+
+.product__image {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  transform: translateY(-45%);
+  width: 249px;
+  height: 252px;
+}
+
+.products__card {
+  width: 280px;
+  height: 485px;
+  border-radius: 24px;
+  padding-top: 164px;
+}
+.products__card--one {
+  background: #ffb8ca;
+}
+.products__card--two {
+  background: #f0d1a5;
+}
+.products__card--three {
+  background: #c2e297;
+}
+
+.products__caption {
+  @include font(20px, 1.15, 0.04em, 400);
+  text-transform: uppercase;
+  color: $title-color;
+}
+
+.products__dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 30px;
+}
+.products__dots-item {
+  margin-right: 4px;
+  &:last-child {
+    margin-right: none;
+  }
+}
+.products__dots-link {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: $btn-light-text-color;
+}
+.products__dots-icon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  fill: currentColor;
+  background-color: currentColor;
+}
+.products__button {
+  width: 40px;
+  height: 40px;
+  margin: 30px auto 0 auto;
+  display: block;
+  border: none;
+  border-radius: 50%;
+  background-color: $btn-light-text-color;
+  background-image: url('../images/products/product-arrow.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.products__text {
+  @include font(14px, 1.52, 0.04em, 700);
+  font-family: DM Sans;
+  color: $first-text-color;
+  margin-top: 30px;
+}
