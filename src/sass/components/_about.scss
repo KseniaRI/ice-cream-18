@@ -1,13 +1,27 @@
 .about {
     background-color: #FFF5F6;
     background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-    
+    padding-top: 125px;
+    padding-bottom: 39px;
+    z-index: 1;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 80%;
+  
+
+    background-image: 
+    url('../images/about/about-sectionbg-mob-1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+		background-image: 
+		url('../images/about/about-sectionbg-mob-2x.png');
+}
 }
 
 .about__pre-title {
-    padding-top: 125px;
     text-align: center;
 }
 
@@ -55,7 +69,6 @@
 	height: 44px;
 	padding-top: 13px;
 	padding-bottom: 13px;
-    margin-bottom: 39px;
     margin-left: 30px;
 	justify-content: center;
 	border-radius: 22px;
