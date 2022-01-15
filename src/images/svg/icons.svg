@@ -13,13 +13,13 @@
 <path fill="#fff" style="fill: var(--color2, #fff)" d="M20.446 15.982h-2.61v9.619h-3.955v-9.619h-1.881v-3.38h1.881v-2.187c0-1.564 0.739-4.014 3.99-4.014l2.929 0.012v3.281h-2.125c-0.349 0-0.839 0.175-0.839 0.921v1.989h2.955l-0.346 3.377z"></path>
 </symbol>
 <symbol id="icon-close" viewBox="0 0 32 32">
-<path d="M2.519 2l26.963 28"></path>
-<path d="M2 29.481l28-26.963"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.519 2l26.963 28"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2 29.481l28-26.963"></path>
 </symbol>
-<symbol id="icon-Burger" viewBox="0 0 32 32">
-<path d="M0 6.4h32"></path>
-<path d="M0 16h32"></path>
-<path d="M0 25.6h32"></path>
+<symbol id="icon-Burger" viewBox="0 0 46 32">
+<path stroke="" style="stroke:" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M0 2.286h45.714"></path>
+<path stroke="" style="stroke:" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M0 16h45.714"></path>
+<path stroke="" style="stroke:" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M0 29.714h45.714"></path>
 </symbol>
 <symbol id="icon-arrow-right-thick" viewBox="0 0 24 24">
 <path d="M10.586 6.586c-0.781 0.779-0.781 2.047 0 2.828l1.586 1.586h-7.244c-1.104 0-2 0.895-2 2s0.896 2 2 2h7.244l-1.586 1.586c-0.781 0.779-0.781 2.047 0 2.828 0.391 0.391 0.902 0.586 1.414 0.586s1.023-0.195 1.414-0.586l6.414-6.414-6.414-6.414c-0.781-0.781-2.047-0.781-2.828 0z"></path>
