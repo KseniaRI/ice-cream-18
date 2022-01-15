@@ -1,0 +1,66 @@
+.hero {
+  position: relative;
+  display: block;
+  padding-top: 27px;
+  background-color: #ffb8ca;
+  z-index: -2;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: -1;
+    top: 27px;
+    left: 36px;
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    background-color: #ffa5ba;
+  }
+
+  .hero__btn-products {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-right: 8px;
+    display: inline-block;
+    @include font(8px, 1.25, 0.04em, 400);
+    padding: 9px 15px;
+    border-radius: 20px;
+    border: 0px;
+    text-decoration: none;
+    border-color: transparent;
+    background-color: #d41443;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .hero__btn-about {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    @include font(8px, 1.25, 0.04em, 400);
+    padding: 9px 15px;
+    border-radius: 20px;
+    border: 0px;
+    border-color: transparent;
+    background-color: #ffffff;
+    color: #d41443;
+    cursor: pointer;
+  }
+}
+.title {
+  margin-left: 0;
+  margin-top: 137px;
+  margin-right: 82px;
+  margin-bottom: 20px;
+  @include font(26px, 1.15, 0.04em, 400);
+  font-family: Titan One;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  .title__part {
+    color: #d41443;
+  }
+}
