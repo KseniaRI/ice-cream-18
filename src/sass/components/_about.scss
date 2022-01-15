@@ -1,0 +1,36 @@
+.about__pre-title {
+    padding-top: 125px;
+    text-align: center;
+}
+
+.about__title {
+    padding-bottom: 26px;
+    text-align: center;
+}
+
+.about__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 46px;
+}
+
+.about__text {
+    width: 100%;
+    margin-bottom: 26px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include font(12px, 1.6, 0.04em, 500);
+}
+
+.about__text_black {
+    margin-bottom: 31px;
+}
+
+.about__text_grey {
+    color: var(--third-text-color);
+    &:not(:last-child){
+        margin-bottom: 31px;
+    }
+}
+
