@@ -34,3 +34,36 @@
     }
 }
 
+.about__modal-button {
+    width: 176px;
+	height: 44px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+    margin-bottom: 39px;
+    margin-left: 30px;
+	justify-content: center;
+	border-radius: 22px;
+    border: 0;
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+    background-color: var(--btn-light-text-color);
+    color: var(--btn-dark-text-color);
+    @include font(14px, 1.3, 0.04em, bold);
+    transition-property: var(--btn-light-hover-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover {
+		background-color: var(--btn-light-hover-color);
+	}
+	&:focus {
+		background-color: var(--btn-light-hover-color);
+	}
+
+}
+
+.about__modal-icon {
+    margin-left: 18.6px;
+    vertical-align: text-bottom;
+}
+
