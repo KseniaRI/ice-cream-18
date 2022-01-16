@@ -93,3 +93,46 @@
     vertical-align: middle;
 }
 
+/* modal window */
+
+.about-backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 300ms, visibility 300ms;
+}
+
+.modal-about {
+    background-color: $bg-about-contacts-color;
+	box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+	border-radius: 24px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: scale(1) translate(-50%, -50%);
+	transition: transform 300ms;
+	width: 450px;
+	min-height: 609px;
+	padding: 40px;
+    /* background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-image:
+    url('../images/products/products-pic1-mob-1x.png');
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+	background-image: 
+	url('../images/products/products-pic1-mob-2x.png');
+}
+
+	@media screen and (min-width: 1200px) {
+	width: 528px;
+	min-height: 581px;
+	} */
+}
