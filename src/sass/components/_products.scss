@@ -118,8 +118,7 @@
   background-repeat: no-repeat;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $btn-dark-text-color;
     border: 1px;
     border-color: $btn-dark-text-color;
@@ -145,27 +144,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   overflow: hidden;
   padding-right: 39px;
   padding-left: 41px;
   border-radius: 20%;
   box-shadow: none;
+
   @include font(14px, 1.52, 0.04em, 700);
   text-align: center;
   font-family: DM Sans;
-  color: $fourth-text-color;
+  color: transparent;
   background-color: transparent;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .products__button:hover &,
-  .pproducts__button:focus & {
-    position: absolute;
+  .products__button:focus & {
     transform: translateY(0);
     background-color: $btn-light-text-color;
     box-shadow: 0px 4px 4px $bg-mob-menu;
+    color: $fourth-text-color;
   }
 }
