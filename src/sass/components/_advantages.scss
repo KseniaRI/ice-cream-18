@@ -1,9 +1,10 @@
 .advantages {
-  background-color: #fff5f6;
+  background-color: $bg-about-contacts-color;
   padding-bottom: 97px;
 }
 .advantages-item {
   max-width: 230px;
+  height: 156px;
   margin-bottom: 38px;
   &:last-child {
     margin-bottom: 0;
@@ -11,11 +12,31 @@
 }
 .advantages-item__title {
   @include font(36px, 1.13, 0.04em, 400);
-  color: var(--btn-dark-text-color);
-  height: 56px;
+  color: $btn-dark-text-color;
+  padding-bottom: 16px;
   text-transform: uppercase;
+  &::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+  }
 }
+.advantages-item__title--first::before {
+  background-image: url(../images/advantages/icon1-1x.png);
+}
+.advantages-item__title--second::before {
+  background-image: url(../images/advantages/icon2-1x.png);
+}
+
+.advantages-item__title--third::before {
+  background-image: url(../images/advantages/icon3-1x.png);
+}
+
 .advantages-item__text {
   @include font(12px, 1.66, 0.03em, 700);
-  color: var(--second-text-color);
+  color: $second-text-color;
 }
