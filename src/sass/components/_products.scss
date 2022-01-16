@@ -7,10 +7,9 @@
   @include font(34px, 1.15, 0.04em, 400);
   text-transform: uppercase;
   color: $accent-color;
-}
-.products__heading {
   margin-bottom: 144px;
 }
+
 .products__list {
   list-style: none;
   text-align: center;
@@ -35,29 +34,40 @@
   width: 280px;
 }
 
-.product__image {
-  position: absolute;
-  top: 0;
-  left: 16px;
-  transform: translateY(-45%);
-  width: 249px;
-  height: 252px;
-}
-
 .products__card {
   width: 280px;
-  height: 485px;
   border-radius: 24px;
-  padding-top: 164px;
+  padding: 164px 39px 41px 41px;
+  &::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 0;
+    left: 16px;
+    transform: translateY(-45%);
+    width: 249px;
+    height: 252px;
+  }
 }
 .products__card--one {
   background: #ffb8ca;
+  &::before {
+    background-image: url('../images/products/products-pic1-mob-1x.png');
+  }
 }
 .products__card--two {
   background: #f0d1a5;
+  &::before {
+    background-image: url('../images/products/products-pic2-mob-1x.png');
+  }
 }
 .products__card--three {
   background: #c2e297;
+  &::before {
+    background-image: url('../images/products/products-pic3-mob-1x.png');
+  }
 }
 
 .products__caption {
@@ -77,7 +87,7 @@
 .products__dots-item {
   margin-right: 4px;
   &:last-child {
-    margin-right: none;
+    margin-right: 0;
   }
 }
 .products__dots-link {
@@ -98,13 +108,25 @@
   height: 40px;
   margin: 30px auto 0 auto;
   display: block;
-  border: none;
+  border: transparent;
   border-radius: 50%;
+  color: $btn-light-text-color;
   background-color: $btn-light-text-color;
   background-image: url('../images/products/product-arrow.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-dark-text-color;
+    border: 1px;
+    border-color: $btn-dark-text-color;
+    box-shadow: 0px 4px 4px rgba(228, 116, 159, 0.897);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .products__text {
