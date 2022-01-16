@@ -90,6 +90,10 @@
   color: $btn-dark-text-color;
   cursor: pointer;
 }
+.mob-menu__btn-buy:hover,
+.mob-menu__btn-buy:focus {
+  background-color: $btn-light-hover-color;
+}
 .mob-menu__icon-vector {
   display: block;
   margin-left: 25px;
@@ -113,17 +117,17 @@
   display: block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -20px;
   content: '';
-  width: 100vw;
+  width: 100vh;
   height: 1px;
   background-color: #e18298;
 }
-.mob-menu__item::after(:last-child) {
+.mob-menu__item:last-child::after {
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -20px;
   content: '';
   width: 100vw;
   height: 1px;
