@@ -8,6 +8,7 @@
   margin-bottom: 54px;
 }
 .contacts__card {
+  flex-grow: 1;
   max-width: 220px;
   min-height: 427px;
   padding: 43px 21px 43px 20px;
@@ -18,6 +19,11 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   background-color: $title-color;
   &:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  .contacts__card {
     margin-bottom: 0;
   }
 }
@@ -55,7 +61,9 @@
   display: block;
   content: '';
   margin: 25px 0;
-  border: 1px solid $bg-slider-color;
+  height: 1px;
+  width: 100%;
+  background-color: $bg-slider-color;
 }
 .contacts__card-time {
   @include font(12px, 1.86, 0.04em, 500);
@@ -68,7 +76,9 @@
   display: block;
   content: '';
   margin: 25px 0;
-  border: 1px solid $bg-slider-color;
+  height: 1px;
+  width: 100%;
+  background-color: $bg-slider-color;
 }
 .contacts__item {
   @include font(12px, 1.5, 0.04em, 500);
@@ -118,7 +128,4 @@
 .contacts__button:focus {
   color: $btn-light-text-color;
   background-color: $btn-dark-hover-color;
-}
-.contacts__button:hover .svg-btn-frst {
-  fill: $btn-light-text-color;
 }
