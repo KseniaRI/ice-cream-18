@@ -14,7 +14,7 @@
   min-height: 345px;
   border-radius: 50%;
   background-color: $fourth-text-color;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     top: 83px;
     right: 0px;
   }
@@ -47,8 +47,11 @@
 
   background-repeat: no-repeat;
   background-position: left 75% bottom 0px;
-  background-size: 170px, 410px;
+
   z-index: -1;
+  @media screen and (max-width: 767px) {
+    background-size: 170px, 410px;
+  }
 }
 .hero__btn-products {
   display: inline-flex;
@@ -60,9 +63,14 @@
   border-radius: 20px;
   border: 0px;
   border-color: transparent;
+  text-decoration: none;
   background-color: $btn-dark-hover-color;
   color: $first-text-color;
   cursor: pointer;
+}
+.hero__btn-products:hover,
+.hero__btn-products:focus {
+  background-color: $btn-dark-hover-color;
 }
 .hero__btn-about {
   display: inline-flex;
@@ -73,9 +81,14 @@
   border-radius: 20px;
   border: 0px;
   border-color: transparent;
+  text-decoration: none;
   background-color: $btn-light-text-color;
   color: $btn-dark-text-color;
   cursor: pointer;
+}
+.hero__btn-about:hover,
+.hero__btn-about:focus {
+  background-color: $btn-light-hover-color;
 }
 
 .title {
