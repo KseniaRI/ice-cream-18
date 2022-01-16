@@ -50,9 +50,6 @@
   padding-top: 44px;
   padding-bottom: 39px;
 }
-.item2,
-.item4,
-.item6,
-.item8 {
+.gallery__item:not(:last-child) {
   margin-bottom: 2px;
 }
