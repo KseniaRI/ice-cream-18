@@ -10,6 +10,7 @@
 .contacts__card {
   max-width: 220px;
   min-height: 427px;
+  padding: 43px 21px 43px 20px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -25,7 +26,7 @@
   min-width: 80px;
   min-height: 16px;
   text-align: center;
-  margin: 43px 120px 25px 20px;
+  margin-bottom: 25px;
   border-radius: 4px;
   border: none;
   background-color: $bg-send-color;
@@ -35,34 +36,28 @@
 .food {
   min-width: 130px;
   min-height: 16px;
-  margin: 43px 70px 25px 20px;
   background-color: $bg-green-color;
 }
 .contacts__card-city {
-  margin-left: 20px;
   margin-bottom: 10px;
   @include font(12px, 1.86, 0.04em, 500);
   color: $second-text-color;
 }
 .contacts__card-descript {
-  margin-left: 20px;
   @include font(12px, 1.86, 0.04em, 500);
   color: $second-text-color;
 }
 .contacts__card-info {
-  margin-left: 20px;
-  margin-bottom: 25px;
-  @include font(12px, 1.86, 0.04em, 500);
+  @include font(12px, 1.86, 0.03em, 500);
   color: $third-text-color;
 }
 .contacts__card-info::after {
   display: block;
   content: '';
-  margin: 25px 21px 25px 0;
+  margin: 25px 0;
   border: 1px solid $bg-slider-color;
 }
 .contacts__card-time {
-  margin: 0 38.1px 0px 20px;
   @include font(12px, 1.86, 0.04em, 500);
   color: $fourth-text-color;
 }
@@ -72,12 +67,8 @@
 .contacts__links::before {
   display: block;
   content: '';
-  margin: 25px 21px 25px 0px;
+  margin: 25px 0;
   border: 1px solid $bg-slider-color;
-}
-.contacts__links {
-  margin-left: 20px;
-  margin-bottom: 43px;
 }
 .contacts__item {
   @include font(12px, 1.5, 0.04em, 500);
@@ -85,6 +76,10 @@
 }
 .contacts__item-link {
   color: currentColor;
+}
+.contacts__item-link:hover,
+.contacts__item-link:focus {
+  color: $btn-dark-text-color;
 }
 .contacts__button-set {
   display: flex;
@@ -119,13 +114,11 @@
   margin-left: 14px;
   fill: currentColor;
 }
-svg:hover,
-svg:focus {
-  stroke: $btn-light-text-color;
-  fill: $btn-light-text-color;
-}
 .contacts__button:hover,
 .contacts__button:focus {
-  background-color: $btn-dark-hover-color;
   color: $btn-light-text-color;
+  background-color: $btn-dark-hover-color;
+}
+.contacts__button:hover .svg-btn-frst {
+  fill: $btn-light-text-color;
 }
