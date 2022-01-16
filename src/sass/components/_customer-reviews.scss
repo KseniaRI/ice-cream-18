@@ -1,7 +1,7 @@
 .slide-section {
   background-color: $first-text-color;
   color: $second-text-color;
-  padding-top: 154px;
+  padding-top: 80px;
   padding-bottom: 86px;
   @media screen and (min-width: 768px) {
     padding-top: 121px;
@@ -54,6 +54,12 @@
   justify-content: center;
 
   margin-bottom: 29px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 19px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+  }
 }
 
 .user-review {
