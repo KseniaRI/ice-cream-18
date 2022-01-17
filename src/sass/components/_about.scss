@@ -96,8 +96,8 @@
 /* modal window */
 
 .about-backdrop {
-    width: 98vw;
-    height: 98vh;
+    width: 100vw;
+    height: 100vh;
     overflow-y: scroll;
     z-index: 998;
     background-color: rgba(0,0,0,0.2);
@@ -105,11 +105,6 @@
     top: 0;
     left: 0;
     transition: opacity 300ms, visibility 300ms;
-
-    @media screen and (min-width: 1280px) {
-    width: 100vw;
-    height: 100vh;
-    }
 }
 
 .modal-about {
@@ -124,6 +119,11 @@
 	width: 450px;
 	min-height: 609px;
 	padding: 40px;
+
+    @media screen and (min-width: 1280px) {
+	width: 528px;
+	min-height: 581px;
+	}
 }
 
 .modal-about__modal-close-btn {
