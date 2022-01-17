@@ -2,6 +2,12 @@
   @include font(34px, 1.15, 0.04em, 400);
   text-transform: uppercase;
   color: #d41443;
+  @media screen and (min-width: 768px) {
+    @include font(48px, 1.46, 0.06em, 400);
+  }
+  @media screen and (min-width: 1280px) {
+    @include font(58px, 1.14, 0.06em, 400);
+  }
 }
 .section__pre-title {
   font-family: Titan One;
@@ -9,4 +15,10 @@
   text-transform: uppercase;
   margin-bottom: 15px;
   color: #ffa5ba;
+  @media screen and (min-width: 768px) {
+    @include font(26px, 1.15, 0.04em, 400);
+  }
+  @media screen and (min-width: 1280px) {
+    @include font(30px, 1.13, 0.04em, 400);
+  }
 }
