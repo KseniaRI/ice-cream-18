@@ -65,7 +65,7 @@
 .user-review {
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 0;
   width: 280px;
   height: 100%;
@@ -73,6 +73,7 @@
   @media screen and (min-width: 768px) {
     width: 620px;
     height: 164px;
+    margin-bottom: 24px;
   }
   @media screen and (min-width: 1280px) {
     width: 926px;
@@ -130,6 +131,13 @@
   }
 }
 
+.user-title {
+  margin-top: 18px;
+  @media screen and (min-width: 768px) {
+    margin-top: 15px;
+  }
+}
+
 .user-navigation {
   display: flex;
   justify-content: center;
@@ -151,4 +159,8 @@
   home {
     fill: #c7133e;
   }
+}
+
+.red-dot {
+  fill: #c7133e;
 }
