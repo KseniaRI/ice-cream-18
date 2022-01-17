@@ -1,97 +1,96 @@
 .backdrop {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: $bg-about-contacts-color;
-    top: 0;
-    left: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-about-contacts-color;
+  top: 0;
+  left: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
-    width: 96%;
-    max-width: 420px;
-    min-height: 400px;
-    padding: 40px;
-    background-color: $title-color;
-    border-radius: 24px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    .is-hidden & {
-        transform: translate(-50%, -50%) scale(0.5);
-      }
+  width: 96%;
+  max-width: 420px;
+  min-height: 400px;
+  padding: 40px;
+  background-color: $title-color;
+  border-radius: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
 }
 .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border: transparent;
-    display: block;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: transparent;
+  display: block;
+  align-items: center;
+  justify-content: center;
 }
-.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 .modal__title {
-    margin-bottom: 12px;
-    @include font(18px, 1.15, 0.01em, 700);
-    text-align: center;
-    color: $accent-color;
+  margin-bottom: 12px;
+  @include font(18px, 1.15, 0.01em, 700);
+  text-align: center;
+  color: $accent-color;
 }
 .modal-form__input {
-    width: 100%;
-    height: 35px;
-    margin-bottom: 15px;
-    border-radius: 24px;
-    border: 1px solid $accent-color;
-    outline: none;
-    padding-left: 25px;
-    padding-right: 25px;
-    color: $third-text-color;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 15px;
+  border-radius: 24px;
+  border: 1px solid $accent-color;
+  outline: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: $third-text-color;
 }
 .modal-form__comment {
-    width: 100%;
-    height: 80px;
-    border-radius: 24px;
-    border: 1px solid $accent-color;
-    outline: none;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    color: $third-text-color;
-    resize: none;
-
+  width: 100%;
+  height: 80px;
+  border-radius: 24px;
+  border: 1px solid $accent-color;
+  outline: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  color: $third-text-color;
+  resize: none;
 }
 .modal-form__text {
-    @include font(12px, 1.15, 0.02em, 400);
-    color: $second-text-color;
-    display: block;
-    margin-bottom: 5px;
+  @include font(12px, 1.15, 0.02em, 400);
+  color: $second-text-color;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .modal-form_button {
-    @extend %button;
-    @include font(16px, 1.15, 0.02em, 400);
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 40px;
-    cursor: pointer;
-    color: $btn-light-text-color;
-    background-color: $btn-dark-text-color;
+  @extend %button;
+  @include font(16px, 1.15, 0.02em, 400);
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  color: $btn-light-text-color;
+  background-color: $btn-dark-text-color;
 }
 
 .modal-form__comment::placeholder {
-    @include font(12px, 1.15, 0.02em, 400);
-    color: $second-text-color;
-    opacity: 0.5;
+  @include font(12px, 1.15, 0.02em, 400);
+  color: $second-text-color;
+  opacity: 0.5;
 }
