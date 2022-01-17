@@ -2,11 +2,22 @@
   background-color: $bg-about-contacts-color;
   padding-bottom: 97px;
 }
+.advantages-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 42px;
+  }
+}
 .advantages-item {
   max-width: 230px;
-  height: 156px;
   margin-bottom: 38px;
   &:last-child {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 180px;
+    flex-wrap: wrap;
     margin-bottom: 0;
   }
 }
@@ -18,11 +29,14 @@
   &::before {
     content: '';
     display: block;
-    width: 50px;
+    width: auto;
     height: 50px;
     background-size: contain;
     margin-bottom: 16px;
     background-repeat: no-repeat;
+  }
+  @media screen and (min-width: 768px) {
+    @include font(48px, 1.14, 0.04em, 400);
   }
 }
 .advantages-item__title--first::before {
@@ -39,4 +53,7 @@
 .advantages-item__text {
   @include font(12px, 1.66, 0.03em, 700);
   color: $second-text-color;
+  @media screen and (min-width: 768px) {
+    @include font(14px, 1.71, 0.03em, 700);
+  }
 }
