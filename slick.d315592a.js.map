@@ -1,0 +1,1 @@
+{"version":3,"sources":["slick.js"],"names":["$","document","ready","slick"],"mappings":";AAAAA,EAAEC,UAAUC,MAAM,WAChBF,EAAE,WAAWG,MAAM","file":"slick.d315592a.js","sourceRoot":"../src","sourcesContent":["$(document).ready(function () {\n  $('.slider').slick({\n    // dots: true,\n    // centerMode: true,\n    // slidesToShow: 3,\n    // slidesToScroll: 2,\n  });\n});\n"]}
