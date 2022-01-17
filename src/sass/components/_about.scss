@@ -136,3 +136,30 @@
 	min-height: 581px;
 	} */
 }
+
+.modal-about__title {
+    padding-bottom: 26px;
+    text-align: center;
+}
+
+
+
+.modal-about__modal-close-btn {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $bg-mob-menu;
+    
+
+
+    
+    
+}
+
+.modal-about__icon {
+    fill: $btn-dark-text-color;
+}
