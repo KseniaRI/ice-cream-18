@@ -3,21 +3,14 @@
   padding-bottom: 98px;
   text-align: center;
 }
-.products__title {
-  @include font(34px, 1.15, 0.04em, 400);
-  text-transform: uppercase;
-  color: $accent-color;
-  margin-bottom: 144px;
-}
-
 .products__list {
   list-style: none;
   text-align: center;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 144px;
 }
 .products__item {
   margin-bottom: 129px;
@@ -154,7 +147,7 @@
   overflow: hidden;
   padding-right: 39px;
   padding-left: 41px;
-  border-radius: 20%;
+  border-radius: 24px;
   box-shadow: none;
 
   @include font(14px, 1.52, 0.04em, 700);
@@ -163,6 +156,7 @@
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   .products__button:focus & {
@@ -170,5 +164,117 @@
     background-color: $btn-light-text-color;
     box-shadow: 0px 4px 4px $bg-mob-menu;
     color: $fourth-text-color;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .products {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  .products__list {
+    flex-direction: row;
+    flex-basis: calc((100% - 3 * 20px) / 3);
+  }
+  .products__item {
+    margin-right: 20px;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .products__card {
+    width: 220px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-bottom: 40px;
+    &::before {
+      width: 220px;
+      height: 226px;
+      left: 0;
+    }
+  }
+  .products__card--one {
+    &::before {
+      background-image: url('../images/products/products-pic1-tab-1x.png');
+    }
+  }
+  .products__card--two {
+    &::before {
+      background-image: url('../images/products/products-pic2-tab-1x.png');
+    }
+  }
+  .products__card--three {
+    &::before {
+      background-image: url('../images/products/products-pic3-tab-1x.png');
+    }
+  }
+  .products__text {
+    @include font(14px, 1.76, 0.04em, 700);
+  }
+  .products__overlay {
+    @include font(14px, 1.76, 0.04em, 700);
+  }
+  .products__button {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+  .products__list {
+    flex-basis: calc((100% - 3 * 24px) / 3);
+    flex-direction: row;
+    margin-top: 253px;
+  }
+  .products__item {
+    margin-right: 24px;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .products__card {
+    width: 335px;
+    padding-top: 165px;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 50px;
+    &::before {
+      width: 335px;
+      height: 335px;
+      left: 0;
+      transform: translateY(-65%);
+    }
+  }
+  .products__card--one {
+    &::before {
+      background-image: url('../images/products/products-pic1-desk-1x.png');
+    }
+  }
+  .products__card--two {
+    &::before {
+      background-image: url('../images/products/products-pic2-desk-1x.png');
+    }
+  }
+  .products__card--three {
+    &::before {
+      background-image: url('../images/products/products-pic3-desk-1x.png');
+    }
+  }
+  .products__caption {
+    @include font(30px, 1.13, 0.04em, 400);
+  }
+  .products__text {
+    @include font(16px, 1.76, 0.04em, 700);
+  }
+  .products__overlay {
+    @include font(16px, 1.76, 0.04em, 700);
+  }
+  .products__button {
+    margin-top: 62px;
   }
 }
