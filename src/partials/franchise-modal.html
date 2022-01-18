@@ -1,0 +1,27 @@
+<div class="backdrop is-hidden" data-franchise-modal>
+    <div class="franchise-modal">
+        <button type="button" class="franchise-modal-close" data-franchise-modal-close>
+            <svg class="icon-close-modal" width="14" height="14">
+                <use href="./images/svg/icons.svg#icon-close-menu">
+                </use>
+            </svg>
+        </button>
+        <p class="franchise-modal__title">Fill out the form below to register</p>
+        <form action="#" class="franchise-modal-form">
+            <label for="user-name" class="franchise-modal-form__text">Name*</label>
+            <input type="text" name="user-name" class="franchise-modal-form__input" required id="user-name">
+            <label for="user-location" class="franchise-modal-form__text">Location</label>
+            <input type="text" name="user-location" class="franchise-modal-form__input" required id="user-location">
+            <label for="user-phone" class="franchise-modal-form__text">Phone*</label>
+            <input type="text" name="user-phone" class="franchise-modal-form__input" required id="user-phone">
+            <label for="user-email" class="franchise-modal-form__text">Email*</label>
+            <input type="text" name="user-email" class="franchise-modal-form__input" required id="user-email">
+
+            <label for="user-comment" class="franchise-modal-form__text">Message</label>
+            <textarea name="user-comment" id="user-comment" class="franchise-modal-form__comment"
+                placeholder="Your message"></textarea>
+
+            <button type="submit" class="button franchise-modal-form_button">Submit</button>
+        </form>
+    </div>
+</div>
