@@ -15,41 +15,55 @@
 }
 .hero__wrap {
   position: relative;
+  height: 420px;
+  @media screen and (min-width: 786px) {
+    height: 320px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 557px;
+  }
 }
 
-.hero__container::before {
+.ice-cream::before {
   content: '';
   position: absolute;
-  top: 83px;
-  right: 0px;
-  width: calc(100vh - (83px + 75px));
-  height: calc(100vh - (83px + 75px));
-  // min-width: 345px;
-  // min-height: 345px;
+  // top: 83px;
+  // right: 0px;
+  // width: calc(100vh - (83px + 75px));
+  // height: calc(100vh - (83px + 75px));
+  // // min-width: 345px;
+  // // min-height: 345px;
+  width: 346px;
+  height: 344px;
   z-index: -2;
   border-radius: 50%;
   background-color: $fourth-text-color;
-
-  @media screen and(min-width: 768px) {
-    top: 31px;
-    right: 137px;
-    width: calc(100vh - (31px + 46px));
-    height: calc(100vh - (31px + 46px));
-  }
+  background-size: contain;
+  top: 75px;
+  top: -15px;
   @media screen and(min-width: 1280px) {
-    top: 51px;
-    right: 267px;
-    width: calc(100vh - (51px + 76px));
-    height: calc(100vh - (51px + 76px));
+    width: 538px;
+    height: 538px;
+    right: -180px;
   }
+  // @media screen and(min-width: 768px) {
+  //   top: 31px;
+  //   right: 137px;
+  //   width: calc(100vh - (31px + 46px));
+  //   height: calc(100vh - (31px + 46px));
+  // }
+  // @media screen and(min-width: 1280px) {
+  //   top: 51px;
+  //   right: 267px;
+  //   width: calc(100vh - (51px + 76px));
+  //   height: calc(100vh - (51px + 76px));
+  // }
 }
-.hero__container::after {
+.ice-cream::after {
   content: '';
   position: absolute;
-  top: 92px;
-  right: 0px;
-  width: 345px;
-  height: calc(100vh - 92px);
+  width: 100%;
+  height: 420px;
   background-image: url(../images/hero-header/header-ice-cream-mob-1x.png);
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -61,29 +75,38 @@
   z-index: -1;
 
   @media screen and(min-width: 768px) {
-    top: 63px;
-    bottom: 0px;
-    right: 137px;
-    width: calc(100vh - (31px + 46px));
-    height: calc(100vh - 63px);
     background-image: url(../images/hero-header/header-ice-cream-tab-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/hero-header/header-ice-cream-tab-2x.png);
     }
-    // background-position: center;
   }
   @media screen and (min-width: 1280px) {
-    top: 107px;
-    bottom: 0px;
-    right: 267px;
-    width: calc(100vh - (51px + 76px));
-    height: calc(100vh - 107px);
+    height: 557px;
     background-image: url(../images/hero-header/header-ice-cream-desk-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/hero-header/header-ice-cream-desk-2x.png);
     }
+  }
+}
+.ice-cream {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  height: calc(100vh - 92px);
+  width: 345px;
+  height: 510px;
+  @media screen and (min-width: 768px) {
+    top: -100px;
+    right: 137px;
+    height: 336px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 0;
+    right: 450px;
+    height: 557px;
+    width: 236px;
   }
 }
 
@@ -126,6 +149,7 @@
 }
 
 .title {
+  padding-top: 90px;
   margin-bottom: 20px;
   @include font(26px, 1.15, 0.04em, 400);
   font-family: Titan One;
@@ -134,7 +158,8 @@
 
   @media screen and (min-width: 768px) {
     @include font(22px, 1.15, 0.04em, 400);
-    margin-top: 102px;
+    // margin-top: 102px;
+    padding-top: 0;
   }
 }
 .title__part {
@@ -155,6 +180,12 @@
     margin-top: 85px;
     margin-left: 124px;
   }
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    margin-top: 112px;
+    margin-left: 124px;
+    @include font(14px, 1.42, 0.04em, 400);
+  }
 }
 .hero__text::before {
   display: none;
@@ -162,7 +193,8 @@
     display: block;
     content: '';
     position: absolute;
-    bottom: 0px;
+
+    bottom: 10px;
     left: 40px;
     width: 124px;
     height: 126px;
@@ -176,6 +208,8 @@
     }
   }
   @media screen and (min-width: 1280px) {
+    width: 188px;
+    height: 191px;
     background-image: url(../images/hero-header/header-milk-desk-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -203,6 +237,8 @@
     }
   }
   @media screen and (min-width: 1280px) {
+    width: 293px;
+    height: 232px;
     background-image: url(../images/hero-header/header-girl-desk-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
