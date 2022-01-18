@@ -160,26 +160,35 @@
     vertical-align: middle;
 }
  
-.about__mobile-wrapper {
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
+.about__tablet-wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and(min-width: 1280px) {
+    display: none;
+  }
+}
+
+.about__desktop-wrapper {
+    display: none;
     @media screen and (min-width: 1280px) {
-        display: none;
-    }
+    display: flex;
+    align-items: center;
+  }
 }
  
-.about__tablet-desktop-wrapper {
+.about__desktop-content {
     display: flex;
- 
-    @media screen and (max-width: 480px) {
-        display: none;
-    }
 }
  
 .about__tablet-desktop-text-n-button {
-    width: 340px;
+    width: 100%;
     padding: 0;
+
+    @media screen and (min-width: 768px) {
+    width: 340px;
+    }
  
     @media screen and (min-width: 1280px) {
     width: 463px;
