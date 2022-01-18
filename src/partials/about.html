@@ -48,12 +48,46 @@ class="about"
             </li>
         </ul>
 
-        <button type="button" class="about__modal-button">
+        <button type="button" class="about__modal-button open-about-modal-btn">
             Read more
             <svg class="about__modal-icon" width="8" height="18">
                 <use href="./images/svg/icons.svg#icon-vector"></use>
             </svg>
         </button>
 
+        <!-- modal window -->
+        
+        <div class="about-backdrop visually-hidden">
+            <div class="modal-about">
+                <button type="button" class="modal-about__modal-close-btn close-about-modal-btn">
+                    <svg class="modal-about__icon" width="14" height="14">
+                        <use href="./images/svg/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <h2 class="modal-about__title section__title">
+                    we create it 
+                    <br> for you
+                </h2>
+                <p class="modal-about__description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus asperiores, assumenda odio consequatur
+                    exercitationem veritatis possimus id a temporibus laudantium aperiam accusantium fugit aut nemo, laboriosam
+                    modi sapiente magni architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur minima maxime perferendis magnam atque sint unde dolores natus officia. A nobis sint neque aliquam accusantium minus id cumque inventore ad! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+                <p class="modal-about__after-title section__pre-title">
+                    wanna know more?
+                </p>
+                <p class="modal-about__call-to-action">
+                    Then, follow our BLOG
+                    <br> & stay updated!
+                </p>
+                <button type="button" class="modal-about__blog-btn">
+                    follow
+                </button>
+        
+        
+            </div>
+        </div>
+
     </div>
 </section>
+
