@@ -1,6 +1,7 @@
 .contacts {
   background: linear-gradient(to bottom, $title-color 5%, $bg-about-contacts-color 5%);
   padding-bottom: 113px;
+
   @media screen and (min-width: 767px) {
     background: linear-gradient(to bottom, $title-color 10%, $bg-about-contacts-color 10%);
   }
