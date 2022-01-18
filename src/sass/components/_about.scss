@@ -6,50 +6,102 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 40% 90%;
-  
-
-    background-image: 
+ 
+ 
+    background-image:
     url('../images/about/about-sectionbg-mob-1x.png');
-
+ 
     @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-		background-image: 
-		url('../images/about/about-sectionbg-mob-2x.png');
+        background-image:
+        url('../images/about/about-sectionbg-mob-2x.png');
 }
+   
+    @media screen and (min-width: 768px) {
+    padding-top: 130px;
+    padding-bottom: 66px;
+    background-image: none;
+    }
+ 
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image: none;
+    }
+ 
+    @media screen and (min-width: 1280px) {
+        padding-bottom: 0;
+        background-position: 50% 80%;
+        background-image:
+        url('../images/about/about-sectionbg-desk-1x.png');
+    }
+ 
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        background-image:
+        url('../images/about/about-sectionbg-desk-2x.png');
+    }
 }
-
+ 
 .about__pre-title {
     text-align: center;
 }
-
+ 
 .about__title {
-    padding-bottom: 26px;
-    text-align: center;
-}
 
+    margin-bottom: 26px;
+    text-align: center;
+ 
+    @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: 1280px) {
+    margin-bottom: 94px;
+    }
+}
+ 
 .about__image {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 46px;
     width: 100%;
-
+ 
     @media screen and (min-width: 768px) {
         width: 340px;
+        height: 339px;
+        margin-right: 17px;
     }
     @media screen and (min-width: 1280px) {
         width: 516px;
+        height: 516px;
+        margin-right: 92px;
     }
 }
-
+ 
 .about__text {
     width: 100%;
     margin-bottom: 26px;
     padding-left: 30px;
     padding-right: 30px;
     @include font(12px, 1.6, 0.04em, 500);
+ 
+    @media screen and (min-width: 768px) {
+    padding: 0;
+    margin-bottom: 62px;
+    @include font(14px, 1.8, 0.03em, 500);
+    }
+ 
+    @media screen and (min-width: 1280px) {
+    padding: 0;
+    margin-bottom: 45px;
+    @include font(16px, 1.7, 0.04em, 500);
+    }
 }
+
 
 .about__text_black {
     margin-bottom: 31px;
@@ -64,33 +116,75 @@
 
 .about__modal-button {
     width: 176px;
-	height: 44px;
-	padding-top: 13px;
-	padding-bottom: 13px;
+    height: 44px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     margin-left: 30px;
-	border-radius: 22px;
+    border-radius: 22px;
     border: 0;
     display: inline-flex;
-	align-items: center;
-	justify-content: center;
+    align-items: center;
+    justify-content: center;
     background-color: $btn-light-text-color;
     color: $btn-dark-text-color;
     @include font(14px, 1.3, 0.04em, bold);
     transition-property: $btn-light-hover-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	&:hover {
-		background-color: $btn-light-hover-color;
-	}
-	&:focus {
-		background-color: $btn-light-hover-color;
-	}
-
+    &:hover {
+        background-color: $btn-light-hover-color;
+    }
+    &:focus {
+        background-color: $btn-light-hover-color;
+    }
+ 
+    @media screen and (min-width: 768px) {
+        margin-left: 0;
+    }
+ 
+    @media screen and (min-width: 1280px) {
+        margin-left: 0;
+    }
 }
-
+ 
 .about__modal-icon {
     margin-left: 18.6px;
     vertical-align: middle;
+}
+ 
+.about__tablet-wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and(min-width: 1280px) {
+    display: none;
+  }
+}
+
+.about__desktop-wrapper {
+    display: none;
+    @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+  }
+}
+ 
+.about__desktop-content {
+    display: flex;
+}
+ 
+.about__tablet-desktop-text-n-button {
+    width: 100%;
+    padding: 0;
+
+    @media screen and (min-width: 768px) {
+    width: 340px;
+    }
+ 
+    @media screen and (min-width: 1280px) {
+    width: 463px;
+    }
 }
 
 /* modal window */
