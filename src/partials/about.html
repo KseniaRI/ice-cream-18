@@ -5,9 +5,14 @@ class="about"
     <div class="container">
         <p class="about__pre-title section__pre-title">tradition and love</p>
         <h2 class="about__title section__title">
-            how it’s 
+            how it’s
             <br>made?
         </h2>
+        <h2 class="about__title-desktop-tablet section__title">
+            how it’s made?
+        </h2>
+        
+        <div class="about__mobile-wrapper">
 
         <picture class="about__visuals">
             <source 
@@ -54,6 +59,53 @@ class="about"
                 <use href="./images/svg/icons.svg#icon-vector"></use>
             </svg>
         </button>
+        </div>
+        
+        <!-- tablet & desktop -->
+
+        <div class="about__tablet-desktop-wrapper">
+
+        <picture class="about__visuals">
+            <source srcset="./images/about/about-cow-desk-1x.png 1x, ./images/about/about-cow-desk-2x.png 2x"
+                media="(min-width:1280px)" />
+        
+            <source srcset="./images/about/about-cow-tab-1x.png 1x, ./images/about/about-cow-tab-2x.png 2x"
+                media="(min-width:768px)" />
+        
+            <source srcset="./images/about/about-cow-mob-1x.png 1x, ./images/about/about-cow-mob-2x.png 2x"
+                media="(min-width:480px)" />
+        
+            <img src="./images/about/about-cow-desk-1x.png" alt="Cow and fresh milk" class="about__image" />
+        </picture>
+        
+        <div class="about__tablet-desktop-text-n-button">
+
+        <ul class="about__text list">
+            <li class="about__text_black">
+                Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem
+                eget, egestas eros.
+                Maecenas eleifend erat at justo fringilla.
+            </li>
+            <li class="about__text_grey">
+                Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in
+                imperdiet placerat.
+                Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+                tincidunt.
+            </li>
+            <li class="about__text_grey">
+                Aliquam erat volutpat. Aenean accumsan.
+            </li>
+        </ul>
+        
+        <button type="button" class="about__modal-button open-about-modal-btn">
+            Read more
+            <svg class="about__modal-icon" width="8" height="18">
+                <use href="./images/svg/icons.svg#icon-vector"></use>
+            </svg>
+        </button>
+        </div>
+
+    </div>
 
         <!-- modal window -->
         
@@ -65,13 +117,15 @@ class="about"
                     </svg>
                 </button>
                 <h2 class="modal-about__title section__title">
-                    we create it 
+                    we create it
                     <br> for you
                 </h2>
                 <p class="modal-about__description">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus asperiores, assumenda odio consequatur
                     exercitationem veritatis possimus id a temporibus laudantium aperiam accusantium fugit aut nemo, laboriosam
-                    modi sapiente magni architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur minima maxime perferendis magnam atque sint unde dolores natus officia. A nobis sint neque aliquam accusantium minus id cumque inventore ad! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    modi sapiente magni architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur minima
+                    maxime perferendis magnam atque sint unde dolores natus officia. A nobis sint neque aliquam accusantium
+                    minus id cumque inventore ad! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 </p>
                 <p class="modal-about__after-title section__pre-title">
                     wanna know more?
@@ -84,10 +138,9 @@ class="about"
                     follow
                 </button>
         
-        
             </div>
         </div>
+        </div>
 
-    </div>
 </section>
 
