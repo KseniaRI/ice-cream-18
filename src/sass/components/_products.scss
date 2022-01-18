@@ -167,15 +167,14 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .products {
     padding-top: 122px;
     padding-bottom: 112px;
   }
   .products__list {
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-basis: calc((100% - 3 * 20px) / 3);
   }
   .products__item {
     margin-right: 20px;
@@ -227,8 +226,7 @@
     padding-bottom: 119px;
   }
   .products__list {
-    display: flex;
-    flex-wrap: wrap;
+    flex-basis: calc((100% - 3 * 24px) / 3);
     flex-direction: row;
     margin-top: 253px;
   }
@@ -266,6 +264,9 @@
     &::before {
       background-image: url('../images/products/products-pic3-desk-1x.png');
     }
+  }
+  .products__caption {
+    @include font(30px, 1.13, 0.04em, 400);
   }
   .products__text {
     @include font(16px, 1.76, 0.04em, 700);
