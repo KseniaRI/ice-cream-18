@@ -22,13 +22,13 @@
   @media screen and (min-width: 768px) {
     padding-top: 37px;
   }
+  @media screen and (min-width: 1280px) {
+    justify-content: space-between;
+  }
 }
 .logo {
   display: block;
   cursor: pointer;
-  // @media screen and (min-width: 768px) {
-  //   padding-top: 37px;
-  // }
 }
 .mob-menu__btn-burger {
   display: block;
@@ -140,6 +140,7 @@
   padding-bottom: 12px;
   padding-left: 0;
   text-decoration: none;
+  cursor: pointer;
 }
 .mob-menu__list {
   position: relative;
@@ -166,5 +167,28 @@
 }
 .mob-menu__link:hover,
 .mob-menu__link:focus {
+  color: $accent-color;
+}
+.menu__list {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
+}
+.menu__item:not(:last-child) {
+  padding-right: 35px;
+}
+.menu__link {
+  display: block;
+  @include font(14px, 1.29, 0.04em, 700);
+  color: $first-text-color;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu__link:hover,
+.menu__link:focus {
   color: $accent-color;
 }
