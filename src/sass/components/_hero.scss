@@ -5,55 +5,88 @@
   background-color: $bg-hero-color;
   z-index: -3;
 }
-.hero::after {
-  content: '';
-  position: absolute;
-  display: block;
-  z-index: -2;
-  min-width: 345px;
-  min-height: 345px;
-  border-radius: 50%;
-  background-color: $fourth-text-color;
-  @media screen and (max-width: 767px) {
-    top: 83px;
-    right: 0px;
-  }
-}
 
 .hero__container {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100vw;
   height: 100vh;
+}
+.hero__wrap {
+  position: relative;
+}
+
+.hero__container::before {
+  content: '';
+  position: absolute;
+  top: 83px;
+  right: 0px;
+  width: calc(100vh - (83px + 75px));
+  height: calc(100vh - (83px + 75px));
+  // min-width: 345px;
+  // min-height: 345px;
+  z-index: -2;
+  border-radius: 50%;
+  background-color: $fourth-text-color;
+
+  @media screen and(min-width: 768px) {
+    top: 31px;
+    right: 137px;
+    width: calc(100vh - (31px + 46px));
+    height: calc(100vh - (31px + 46px));
+  }
+  @media screen and(min-width: 1280px) {
+    top: 51px;
+    right: 267px;
+    width: calc(100vh - (51px + 76px));
+    height: calc(100vh - (51px + 76px));
+  }
+}
+.hero__container::after {
+  content: '';
+  position: absolute;
+  top: 92px;
+  right: 0px;
+  width: 345px;
+  height: calc(100vh - 92px);
   background-image: url(../images/hero-header/header-ice-cream-mob-1x.png);
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(../images/hero-header/header-ice-cream-mob-2x.png);
   }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
 
-  @media screen and (min-width: 768px) {
+  @media screen and(min-width: 768px) {
+    top: 63px;
+    bottom: 0px;
+    right: 137px;
+    width: calc(100vh - (31px + 46px));
+    height: calc(100vh - 63px);
     background-image: url(../images/hero-header/header-ice-cream-tab-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/hero-header/header-ice-cream-tab-2x.png);
     }
+    // background-position: center;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
+    top: 107px;
+    bottom: 0px;
+    right: 267px;
+    width: calc(100vh - (51px + 76px));
+    height: calc(100vh - 107px);
     background-image: url(../images/hero-header/header-ice-cream-desk-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/hero-header/header-ice-cream-desk-2x.png);
     }
   }
-
-  background-repeat: no-repeat;
-  background-position: left 75% bottom 0px;
-
-  z-index: -1;
-  @media screen and (max-width: 767px) {
-    background-size: 170px, 410px;
-  }
 }
+
 .hero__btn-products {
   display: inline-flex;
   justify-content: center;
@@ -99,8 +132,81 @@
   text-transform: uppercase;
   color: $title-color;
 
-  .title__part {
-    @include font(48px, 1, 0.04em, 400);
-    color: $btn-dark-text-color;
+  @media screen and (min-width: 768px) {
+    @include font(22px, 1.15, 0.04em, 400);
+    margin-top: 102px;
+  }
+}
+.title__part {
+  @include font(48px, 1, 0.04em, 400);
+  color: $btn-dark-text-color;
+
+  @media screen and (min-width: 768px) {
+    @include font(34px, 1.15, 0.04em, 400);
+  }
+}
+.hero__text {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    @include font(8px, 1.5, 0.04em, 400);
+    color: $first-text-color;
+    width: 114px;
+    margin-top: 85px;
+    margin-left: 124px;
+  }
+}
+.hero__text::before {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 40px;
+    width: 124px;
+    height: 126px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../images/hero-header/header-milk-tab-1x.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/header-milk-tab-2x.png);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/hero-header/header-milk-desk-1x.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/header-milk-desk-2x.png);
+    }
+  }
+}
+.hero__text::after {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    width: 168px;
+    height: 133px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(../images/hero-header/header-girl-tab-1x.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/header-girl-tab-2x.png);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/hero-header/header-girl-desk-1x.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/header-girl-desk-2x.png);
+    }
   }
 }
