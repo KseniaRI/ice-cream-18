@@ -8,10 +8,14 @@
     justify-content: space-between;
     padding-right: 42px;
   }
+  @media screen and (min-width: 1280px) {
+    padding-right: 0;
+  }
 }
 .advantages-item {
   max-width: 230px;
   margin-bottom: 38px;
+  transition: background-color 1s linear;
   &:last-child {
     margin-bottom: 0;
   }
@@ -20,12 +24,20 @@
     flex-wrap: wrap;
     margin-bottom: 0;
   }
+  @media screen and (min-width: 1280px) {
+    max-width: 330px;
+  }
+}
+.advantages-item:hover {
+  background-color: $bg-hero-color;
 }
 .advantages-item__title {
   @include font(36px, 1.13, 0.04em, 400);
   color: $btn-dark-text-color;
   padding-bottom: 16px;
   text-transform: uppercase;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   &::before {
     content: '';
     display: block;
@@ -34,11 +46,24 @@
     background-size: contain;
     margin-bottom: 16px;
     background-repeat: no-repeat;
+    transition: 1s;
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 50px;
+    }
   }
   @media screen and (min-width: 768px) {
     @include font(48px, 1.14, 0.04em, 400);
   }
+  @media screen and (min-width: 1280px) {
+    @include font(58px, 1.14, 0.04em, 400);
+  }
 }
+.advantages-item__title:hover {
+  -webkit-text-shadow: 2px 2px 2px #000;
+  -moz-text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 2px #000;
+}
+
 .advantages-item__title--first::before {
   background-image: url(../images/advantages/icon1-1x.png);
 }
@@ -53,7 +78,12 @@
 .advantages-item__text {
   @include font(12px, 1.66, 0.03em, 700);
   color: $second-text-color;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   @media screen and (min-width: 768px) {
     @include font(14px, 1.71, 0.03em, 700);
+  }
+  @media screen and (min-width: 1280px) {
+    @include font(16px, 1.76, 0.02em, 700);
   }
 }
