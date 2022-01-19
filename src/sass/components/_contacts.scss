@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   margin-bottom: 86px;
 }
 @media screen and (min-width: 767px) and (max-width: 1280px) {
@@ -26,16 +27,15 @@
     flex-direction: column;
     flex-wrap: nowrap;
     margin-bottom: 54px;
+    padding: 0 30px;
   }
 }
 @media screen and (min-width: 1280px) {
   .contacts__card-set {
-    flex-basis: calc((100% / 3 - 30px));
+    flex-basis: calc(100% / 3 - 30px);
   }
 }
 .contacts__card {
-  // max-width: 220px;
-
   min-height: 427px;
   padding: 43px 21px 43px 20px;
   margin-left: auto;
@@ -48,9 +48,9 @@
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 400px) {
   .contacts__card {
-    width: 100%;
+    width: 340px;
   }
 }
 @media screen and (min-width: 768px) {
