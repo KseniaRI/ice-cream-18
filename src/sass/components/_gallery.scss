@@ -36,13 +36,7 @@
 
 .gallery__image {
   border-radius: 5px;
-  &:focus,
-  &:hover {
-    transform: scale(1.5);
-    box-shadow: 0 0 15px $accent-color;
-  }
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   @media screen and (min-width: 768px) {
     border-radius: 12px;
   }
@@ -100,12 +94,32 @@
   }
 }
 .gallery__item {
+  position: relative;
+  background-color: transparent;
+  border-radius: 5px;
+  &:focus,
+  &:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 15px $bg-mob-menu;
+    z-index: 999;
+  }
+  &:focus .gallery__overlay,
+  &:hover .gallery__overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 40px;
+
   @media screen and (min-width: 768px) {
+    border-radius: 12px;
     width: 85px;
   }
   @media screen and (min-width: 1280px) {
     width: 139px;
+    border-radius: 20px;
   }
   &:not(:last-child) {
     margin-bottom: 2px;
@@ -124,5 +138,50 @@
   }
   @media screen and (min-width: 1280px) {
     width: 285px;
+  }
+}
+.item5 {
+  width: 40px;
+  @media screen and (min-width: 768px) {
+    width: 85px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 139px;
+  }
+}
+.gallery__overlay {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  font-size: 8px;
+  line-height: 1.52;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $first-text-color;
+  text-shadow: 0 0 10px $bg-mob-menu, 0 0 6px $bg-mob-menu, 0 0 10px $bg-mob-menu;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 245, 246, 0.9),
+    rgba(255, 245, 246, 0.5),
+    rgba(255, 245, 246, 0.2),
+    rgba(255, 245, 246, 0)
+  );
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
   }
 }
