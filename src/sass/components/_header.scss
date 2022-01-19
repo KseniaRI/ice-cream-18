@@ -12,10 +12,11 @@
 .wrap {
   display: flex;
   align-items: center;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  // width: 100%;
 
   @media screen and (max-width: 767px) {
+    padding-top: 6px;
+    padding-bottom: 6px;
     justify-content: space-between;
   }
 
