@@ -1,0 +1,58 @@
+.backdrop {
+    @extend %backdrop;
+  }
+  .map-modal {
+    width: 90%;
+    max-width: 1100px;
+    height: auto;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+  }
+  .map-modal-close {
+    @extend %modal-close;
+  }
+  .backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .map-responsive {
+    max-width: 1100px;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    border-radius: 24px;   
+}
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.map-modal-close {
+//     position: absolute;
+    top: 15px;
+    right: 60px;
+    // width: 35px;
+    // height: 35px;
+//     border-radius: 50%;   
+
+    // background-color: $bg-mob-menu;
+//     border: transparent;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.icon-close-map-modal {
+    fill: $title-color;
+}
