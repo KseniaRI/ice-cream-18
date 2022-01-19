@@ -7,18 +7,72 @@
             </svg>
         </button>
         <p class="modal__title">Create your 100% natural dessert</p>
-        <form action="#" class="modal-form">
-            <label for="user" class="modal-form__text">Choose product</label>
-            <input type="text" name="user" class="modal-form__input" required id="user">
-            <label for="user" class="modal-form__text">Choose product</label>
-            <input type="text" name="user" class="modal-form__input" required id="user">
-            <label for="user" class="modal-form__text">Choose product</label>
-            <input type="text" name="user" class="modal-form__input" required id="user">
-            <label for="user-comment" class="modal-form__text">Your comments</label>
-            <textarea name="user-comment" id="user-comment" class="modal-form__comment"
-              placeholder="Add a note"></textarea>
 
-            <button type="submit" class="button modal-form_button">Proceed to checkout</button>
+        <div role="group" class="group">
+            <p class="group-title">Choose product</p>
+            <ul class="product-options list">
+                <li class="product-options__item">
+                    <input type="checkbox" name="product" value="ice-cream" id="ice-cream">
+                    <label for="ice-cream">Ice cream</label>
+                </li>
+                <li class="product-options__item">
+                    <input type="checkbox" name="product" value="ice-coffee" id="ice-coffee">
+                    <label for="ice-cream">Ice coffee</label>
+                </li>
+                <li class="product-options__item">
+                    <input type="checkbox" name="product" value="milkshakes" id="milkshakes">
+                    <label for="ice-cream">Milkshakes</label>
+                </li>
+            </ul>
+        </div>
+
+        <div role="group" class="group">
+            <p class="group-title">Size</p>
+            <ul class="product-size list">
+                <li class="product-size__item">
+                    <input type="radio" name="size" value="small" id="small">
+                    <label for="small">Small</label>
+                </li>
+                <li class="product-size__item">
+                    <input type="radio" name="size" value="medium" id="medium">
+                    <label for="medium">Medium</label>
+                </li>
+                <li class="product-size__item">
+                    <input type="radio" name="size" value="large" id="large">
+                    <label for="large">Large</label>
+                </li>
+            </ul>
+        </div>
+
+
+        <div role="group" class="group">
+            <p class="group-title">Add topping</p>
+            <ul class="product-topping list">
+                <li class="product-topping__item">
+                    <input type="radio" name="topping" value="yes" id="yes">
+                    <label for="yes">Yes</label>
+                </li>
+                <li class="product-topping__item">
+                    <input type="radio" name="topping" value="large" id="large">
+                    <label for="no">No</label>
+                </li>
+            </ul>
+        </div>
+
+        
+        <!-- <form action="#" class="modal-form">
+            <label for="user" class="modal-form__text">Choose product</label>
+            <input type="text" name="user" class="modal-form__input" required id="user">
+            <label for="user" class="modal-form__text">Choose product</label>
+            <input type="text" name="user" class="modal-form__input" required id="user">
+            <label for="user" class="modal-form__text">Choose product</label>
+            <input type="text" name="user" class="modal-form__input" required id="user"> -->
+
+
+        <label for="user-comment" class="modal-form__text">Your comments</label>
+        <textarea name="user-comment" id="user-comment" class="modal-form__comment" placeholder="Add a note"></textarea>
+
+        <button type="submit" class="button modal-form_button">Proceed to checkout</button>
         </form>
     </div>
 </div>
