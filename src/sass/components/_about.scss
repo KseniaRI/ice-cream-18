@@ -81,6 +81,41 @@
         margin-right: 92px;
     }
 }
+
+.about__image {
+    animation-name: tossing;
+    -webkit-animation-name: tossing;    
+ 
+    animation-duration: 2.5s;   
+    -webkit-animation-duration: 2.5s;
+ 
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+ 
+@keyframes tossing {
+    0% {
+        transform: rotate(-4deg);   
+    }
+    50% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(-4deg);   
+    }                       
+}
+ 
+@-webkit-keyframes tossing {
+    0% {
+        -webkit-transform: rotate(-4deg);   
+    }
+    50% {
+        -webkit-transform: rotate(4deg);
+    }
+    100% {
+        -webkit-transform: rotate(-4deg);   
+    }               
+}
  
 .about__text {
     width: 100%;
@@ -102,7 +137,6 @@
     }
 }
 
-
 .about__text_black {
     margin-bottom: 31px;
 }
@@ -115,6 +149,7 @@
 }
 
 .about__modal-button {
+    
     width: 176px;
     height: 44px;
     padding-top: 13px;
