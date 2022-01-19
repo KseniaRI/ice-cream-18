@@ -1,30 +1,36 @@
 .hero {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
   background-color: $bg-hero-color;
   z-index: -3;
-}
-
-.hero__container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-.hero__wrap {
-  position: relative;
-  height: 420px;
-  // bottom: -50px;
   @media screen and (min-width: 786px) {
-    height: 320px;
-    // bottom: -100px;
+    padding-top: 94px;
   }
   @media screen and (min-width: 1280px) {
-    height: 557px;
+    padding-top: 156px;
   }
 }
+
+// .hero__container {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   // width: 100vw;
+//   // height: 100vh;
+// }
+// .hero__wrap {
+//   position: relative;
+//   height: 420px;
+//   // bottom: -50px;
+//   @media screen and (min-width: 786px) {
+//     height: 320px;
+//     // bottom: -100px;
+//   }
+//   @media screen and (min-width: 1280px) {
+//     height: 557px;
+//   }
+// }
 
 .ice-cream::before {
   content: '';
@@ -35,13 +41,16 @@
   border-radius: 50%;
   background-color: $fourth-text-color;
   background-size: contain;
-  top: 75px;
-  top: -15px;
+
+  @media screen and(min-width: 768px) {
+    top: 31px;
+  }
 
   @media screen and(min-width: 1280px) {
     width: 538px;
     height: 538px;
     right: -180px;
+    top: 52px;
   }
 }
 .ice-cream::after {
@@ -60,6 +69,10 @@
   z-index: -1;
 
   @media screen and(min-width: 768px) {
+    width: 143px;
+    height: 336px;
+    top: 59px;
+    left: 25%;
     background-image: url(../images/hero-header/header-ice-cream-tab-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -67,6 +80,7 @@
     }
   }
   @media screen and (min-width: 1280px) {
+    top: 108px;
     height: 557px;
     background-image: url(../images/hero-header/header-ice-cream-desk-1x.png);
 
@@ -77,13 +91,14 @@
 }
 .ice-cream {
   position: absolute;
+
   top: 0;
   right: 0px;
   height: calc(100vh - 92px);
   width: 345px;
   height: 510px;
   @media screen and (min-width: 768px) {
-    top: -100px;
+    bottom: 0;
     right: 137px;
     height: 336px;
   }
@@ -283,18 +298,19 @@
 }
 .hero__text {
   display: none;
+  position: relative;
   @media screen and (min-width: 768px) {
     display: block;
     @include font(8px, 1.5, 0.04em, 400);
     color: $first-text-color;
     width: 114px;
-    margin-top: 85px;
+    margin-top: 66px;
     margin-left: 124px;
   }
   @media screen and (min-width: 1280px) {
     width: 200px;
     margin-top: 112px;
-    margin-left: 124px;
+    margin-left: 180px;
     @include font(14px, 1.42, 0.04em, 400);
   }
 }
@@ -304,8 +320,10 @@
     display: block;
     content: '';
     position: absolute;
-    bottom: 10px;
-    left: 40px;
+    // bottom: 10px;
+    // left: 40px;
+    right: 100%;
+    top: -100%;
     width: 124px;
     height: 126px;
     background-repeat: no-repeat;
@@ -333,8 +351,8 @@
     display: block;
     content: '';
     position: absolute;
-    bottom: -28px;
-    right: 40px;
+    bottom: -26px;
+    left: 400%;
     width: 168px;
     height: 133px;
     background-repeat: no-repeat;
