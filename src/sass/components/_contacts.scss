@@ -61,8 +61,6 @@
 }
 @media screen and (min-width: 1280px) {
   .contacts__card {
-    // max-width: 330px;
-    // flex-direction: row;
     min-height: 572px;
     margin-right: 0;
     margin-left: 0;
@@ -109,20 +107,20 @@
   @include font(12px, 1.86, 0.04em, 500);
   color: $second-text-color;
   @media screen and (min-width: 768px) {
-    @include font(14px, 1.86, 0.04em, 500);
+    font-size: 14px;
   }
   @media screen and (min-width: 1280px) {
-    @include font(16px, 1.86, 0.04em, 500);
+    font-size: 16px;
   }
 }
 .contacts__card-info {
   @include font(12px, 1.86, 0.03em, 500);
   color: $third-text-color;
   @media screen and (min-width: 768px) {
-    @include font(14px, 1.66, 0.04em, 500);
+    font-size: 14px;
   }
   @media screen and (min-width: 1280px) {
-    @include font(16px, 1.83, 0.03em, 500);
+    font-size: 16px;
   }
 }
 .contacts__card-info::after {
