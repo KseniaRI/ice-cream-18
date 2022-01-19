@@ -6,7 +6,17 @@
     background: linear-gradient(to bottom, $title-color 10%, $bg-about-contacts-color 10%);
   }
   @media screen and (min-width: 1280px) {
-    background: linear-gradient(to bottom, $title-color 12%, $bg-about-contacts-color 12%);
+    background-image: url('../images/contacts/sectionbg@1x.png'),
+      linear-gradient(
+        180deg,
+        $title-color 100px,
+        $bg-about-contacts-color 0,
+        $bg-about-contacts-color
+      );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-position: 50% 100px, 0 0;
   }
 }
 .contacts__card-set {
