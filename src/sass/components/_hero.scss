@@ -31,7 +31,29 @@
 //     height: 557px;
 //   }
 // }
+.ice-cream {
+  position: absolute;
 
+  top: 0;
+  right: 0px;
+  height: calc(100vh - 92px);
+  width: 171px;
+  height: 410px;
+
+  @media screen and (min-width: 768px) {
+    bottom: 0;
+    right: 137px;
+    height: 336px;
+    width: 345px;
+    height: 510px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 0;
+    right: 450px;
+    height: 557px;
+    width: 236px;
+  }
+}
 .ice-cream::before {
   content: '';
   position: absolute;
@@ -56,8 +78,8 @@
 .ice-cream::after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 420px;
+  width: 171px;
+  height: 410px;
   background-image: url(../images/hero-header/header-ice-cream-mob-1x.png);
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -89,26 +111,7 @@
     }
   }
 }
-.ice-cream {
-  position: absolute;
 
-  top: 0;
-  right: 0px;
-  height: calc(100vh - 92px);
-  width: 345px;
-  height: 510px;
-  @media screen and (min-width: 768px) {
-    bottom: 0;
-    right: 137px;
-    height: 336px;
-  }
-  @media screen and (min-width: 1280px) {
-    top: 0;
-    right: 450px;
-    height: 557px;
-    width: 236px;
-  }
-}
 .hero__btn-products {
   display: inline-flex;
   justify-content: center;
