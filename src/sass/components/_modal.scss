@@ -5,6 +5,22 @@
   min-height: 400px;
   @extend %modal;
 }
+.modal:hover {
+  background: linear-gradient(45deg, #f8ced8, #ffffff);
+  background-size: 200%;
+  animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
 .modal-close {
   @extend %modal-close;
 }
@@ -74,23 +90,21 @@
   color: $second-text-color;
 }
 .product-options__item {
-  &:not(:last-child) {  
+  &:not(:last-child) {
     margin-bottom: 5px;
   }
-    @include font(16px, 1.15, 0.02em, 500);
-    color: $third-text-color;
-
+  @include font(16px, 1.15, 0.02em, 500);
+  color: $third-text-color;
 }
 .product-size,
 .product-topping {
   display: flex;
 }
-.product-size__item, 
+.product-size__item,
 .product-topping__item {
-  &:not(:last-child) {  
+  &:not(:last-child) {
     margin-right: 15px;
   }
-    @include font(16px, 1.15, 0.02em, 500);
-    color: $third-text-color;
+  @include font(16px, 1.15, 0.02em, 500);
+  color: $third-text-color;
 }
-
