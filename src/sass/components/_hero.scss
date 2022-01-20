@@ -9,15 +9,18 @@
 
   .container {
     position: relative;
+
+    // исправить ниж паддинг
+    // padding-bottom: 161px;
   }
-  @media screen and (min-width: 786px) {
+  @media screen and (min-width: 768px) {
     padding-top: 102px;
   }
   @media screen and (min-width: 1280px) {
     padding-top: 171px;
     // padding-bottom: 102px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .container {
       padding-bottom: 161px;
     }
@@ -131,7 +134,8 @@
     width: 236px;
     height: 557px;
     left: 119px;
-    bottom: 0;
+    bottom: -20px;
+    // bottom: 0; правильно, -20 временный костыль
     background-image: url(../images/hero-header/header-ice-cream-desk-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
