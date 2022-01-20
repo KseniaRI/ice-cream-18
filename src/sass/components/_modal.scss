@@ -18,17 +18,6 @@
   @extend %modal-title;
   margin-bottom: 25px;
 }
-// .modal-form__input {
-//   width: 100%;
-//   height: 35px;
-//   margin-bottom: 15px;
-//   border-radius: 24px;
-//   border: 1px solid $accent-color;
-//   outline: none;
-//   padding-left: 25px;
-//   padding-right: 25px;
-//   color: $third-text-color;
-// }
 .modal-form__comment {
   width: 100%;
   height: 80px;
@@ -49,7 +38,7 @@
   color: $second-text-color;
 }
 
-.modal-form_button {
+.modal-form__button {
   @extend %button;
   @include font(16px, 1.3, 0.04em, 400);
   display: block;
