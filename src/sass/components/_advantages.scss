@@ -94,7 +94,7 @@
   color: $second-text-color;
   background: linear-gradient(45deg, rgba(250, 187, 202, 0.3), rgba(248, 248, 248, 0.3));
   background-size: 200%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 3s ease infinite;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   @media screen and (min-width: 768px) {
