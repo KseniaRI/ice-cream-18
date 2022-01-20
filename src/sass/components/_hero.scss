@@ -1,7 +1,5 @@
 .hero {
   position: relative;
-  // width: 100vw;
-  // height: 100vh;
   background-color: $bg-hero-color;
   z-index: -3;
   padding-top: 193px;
@@ -9,16 +7,12 @@
 
   .container {
     position: relative;
-
-    // исправить ниж паддинг
-    // padding-bottom: 161px;
   }
   @media screen and (min-width: 768px) {
     padding-top: 102px;
   }
   @media screen and (min-width: 1280px) {
     padding-top: 171px;
-    // padding-bottom: 102px;
   }
   @media screen and (max-width: 767px) {
     .container {
@@ -26,29 +20,7 @@
     }
   }
 }
-// .hero__container {
-//   padding-bottom: 160px;
-//   position: relative;
-// }
-// .hero__container {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   // width: 100vw;
-//   // height: 100vh;
-// }
-// .hero__wrap {
-//   position: relative;
-//   height: 420px;
-//   // bottom: -50px;
-//   @media screen and (min-width: 786px) {
-//     height: 320px;
-//     // bottom: -100px;
-//   }
-//   @media screen and (min-width: 1280px) {
-//     height: 557px;
-//   }
-// }
+
 .ice-cream {
   position: absolute;
   left: 0;
@@ -78,9 +50,6 @@
   bottom: 12px;
   z-index: -2;
   border-radius: 50%;
-  // background-color: $fourth-text-color;
-  // background-color: $bg-hero-color;
-  // background-size: contain;
   background-image: url(../images/hero-header/pngwing.com.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,7 +113,6 @@
     height: 557px;
     left: 119px;
     bottom: -20px;
-    // bottom: 0; правильно, -20 временный костыль
     background-image: url(../images/hero-header/header-ice-cream-desk-1x.png);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -199,11 +167,9 @@
 .title__numbers {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
 }
 
 .title {
-  // padding-top: 137px;
   margin-bottom: 20px;
   @include font(26px, 1.15, 0.04em, 400);
   font-family: Titan One;
@@ -211,12 +177,10 @@
   color: $title-color;
 
   @media screen and (min-width: 768px) {
-    // padding-top: 15px;
     @include font(22px, 1.15, 0.04em, 400);
   }
   @media screen and (min-width: 1280px) {
     @include font(38px, 1.16, 0.04em, 400);
-    // padding-top: 171px;
   }
 }
 .title__part {
@@ -373,8 +337,6 @@
     display: block;
     content: '';
     position: absolute;
-    // bottom: 10px;
-    // left: 40px;
     right: 100%;
     top: -100%;
     width: 124px;
