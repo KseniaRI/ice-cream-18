@@ -206,11 +206,6 @@
 .contacts__item-link:focus {
   color: $btn-dark-text-color;
 }
-@media screen and (min-width: 768px) {
-  .contacts__button-set {
-    text-align: center;
-  }
-}
 li {
   list-style: none;
 }
@@ -218,7 +213,7 @@ li {
   .contacts__button-set {
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     flex-wrap: nowrap;
   }
 }
