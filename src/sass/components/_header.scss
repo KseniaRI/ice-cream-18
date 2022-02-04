@@ -29,11 +29,26 @@
   @media screen and (min-width: 1280px) {
     width: 1090px;
     justify-content: space-between;
+    position: relative;
   }
 }
 .logo {
   display: block;
   cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    left: -49px;
+  }
+}
+.logo__desktop {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+    @include font(26px, 1.15, 0.04em, 400);
+    color: $bg-hero-color;
+    // font-family: Titan One;
+    // text-transform: uppercase;
+  }
 }
 .mob-menu__btn-burger {
   display: block;

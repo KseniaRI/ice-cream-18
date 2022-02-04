@@ -61,13 +61,13 @@
   }
 
   @media screen and(min-width: 768px) {
-    background-color: $pre-title-color;
-    // background-image: url(../images/hero-header/pngwing.com.png);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    // opacity: 0.7;
-    // animation: spin 10s linear 0s infinite;
+    // background-color: $pre-title-color;
+    background-image: url(../images/hero-header/pngwing.com.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    animation: spin 10s linear 0s infinite;
     left: 293px;
     bottom: 46px;
     width: 324px;
