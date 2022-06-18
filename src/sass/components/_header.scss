@@ -2,33 +2,53 @@
   position: relative;
   width: 100%;
   height: 100%;
+  // left: auto;
+  // right: auto;
 }
 .header {
   position: absolute;
+  width: 100%;
 }
 .header__container {
-  width: 100vw;
+  width: 100%;
 }
 .wrap {
   display: flex;
   align-items: center;
-  padding-top: 6px;
-  padding-bottom: 6px;
 
   @media screen and (max-width: 767px) {
     justify-content: space-between;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 
   @media screen and (min-width: 768px) {
+    width: 740px;
     padding-top: 37px;
   }
   @media screen and (min-width: 1280px) {
+    width: 1090px;
     justify-content: space-between;
+    position: relative;
   }
 }
 .logo {
   display: block;
   cursor: pointer;
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    left: -49px;
+  }
+}
+.logo__desktop {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+    @include font(26px, 1.15, 0.04em, 400);
+    color: $bg-hero-color;
+    // font-family: Titan One;
+    // text-transform: uppercase;
+  }
 }
 .mob-menu__btn-burger {
   display: block;
@@ -160,6 +180,7 @@
     display: none;
   }
   width: 160px;
+  height: 45px;
   padding: 15px;
   margin: 0;
 }
