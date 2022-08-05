@@ -7,36 +7,33 @@
   background-size: contain;
   background-position: 40% 90%;
 
-  background-image: url('../images/about/about-sectionbg-mob-1x.png');
+  @media screen and (max-width: 767px){
 
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url('../images/about/about-sectionbg-mob-2x.png');
+    background-image: url('../images/about/about-sectionbg-mob-1x.png');
+      
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url('../images/about/about-sectionbg-mob-2x.png');
+      }
   }
 
   @media screen and (min-width: 768px) {
     padding-top: 130px;
     padding-bottom: 66px;
-    background-image: none;
-  }
-
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: none;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-bottom: 0;
+    padding-bottom: 155px;
+    padding-top: 39px;
     background-position: 50% 80%;
     background-image: url('../images/about/about-sectionbg-desk-1x.png');
-  }
 
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url('../images/about/about-sectionbg-desk-2x.png');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/about/about-sectionbg-desk-2x.png');
+      }
   }
 }
 
@@ -74,18 +71,15 @@
     height: 516px;
     margin-right: 92px;
   }
-}
 
-.about__image {
   animation-name: tossing;
   -webkit-animation-name: tossing;
-
   animation-duration: 2.5s;
   -webkit-animation-duration: 2.5s;
-
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
 }
+
 
 @keyframes tossing {
   0% {
@@ -125,27 +119,6 @@
   }
 
   @media screen and (min-width: 1280px) {
-    padding: 0;
-    margin-bottom: 45px;
-    @include font(16px, 1.7, 0.04em, 500);
-  }
-}
-
-.about__text {
-  width: 100%;
-  margin-bottom: 26px;
-  padding-left: 30px;
-  padding-right: 30px;
-  @include font(12px, 1.6, 0.04em, 500);
-
-  @media screen and (min-width: 768px) {
-    padding: 0;
-    margin-bottom: 62px;
-    @include font(14px, 1.8, 0.03em, 500);
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding: 0;
     margin-bottom: 45px;
     @include font(16px, 1.7, 0.04em, 500);
   }
@@ -153,12 +126,19 @@
 
 .about__text_black {
   margin-bottom: 31px;
+  @media screen and (min-width: 1280px){
+    margin-bottom: 35px;
+  }
 }
 
 .about__text_grey {
   color: $third-text-color;
   &:not(:last-child) {
     margin-bottom: 31px;
+
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 35px;
+      }
   }
 }
 
@@ -179,18 +159,12 @@
   transition-property: $btn-light-hover-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    background-color: $btn-light-hover-color;
-  }
+  &:hover,
   &:focus {
     background-color: $btn-light-hover-color;
   }
 
   @media screen and (min-width: 768px) {
-    margin-left: 0;
-  }
-
-  @media screen and (min-width: 1280px) {
     margin-left: 0;
   }
 }
@@ -200,29 +174,18 @@
   vertical-align: middle;
 }
 
-.about__tablet-wrapper {
+.about__wrapper {
   @media screen and (min-width: 768px) {
     display: flex;
   }
 
   @media screen and(min-width: 1280px) {
-    display: none;
-  }
-}
-
-.about__desktop-wrapper {
-  display: none;
-  @media screen and (min-width: 1280px) {
     display: flex;
-    align-items: center;
+      align-items: center;
   }
 }
 
-.about__desktop-content {
-  display: flex;
-}
-
-.about__tablet-desktop-text-n-button {
+.about__text-n-button {
   width: 100%;
   padding: 0;
 
