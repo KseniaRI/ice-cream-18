@@ -4,12 +4,17 @@
   const closeMenuBtn = document.querySelector('.js-close-menu');
   
   const mobMenuList = document.querySelector('.mob-menu__list');
+  const mobMenuBuyNowBtn = document.querySelector('[data-modal-buy-open]');
 
-   onMenuItemClick = (e) => {
+  const closeMenu = () => {
+     mobileMenu.classList.remove('is-open');
+  }
+
+  const onMenuItemClick = (e) => {
     if (e.target.nodeName !== 'A') {
       return;
     } else {
-      toggleMenu();
+      closeMenu();
      }
   }
 
@@ -24,8 +29,9 @@
       : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
 
-    // addEventListener while the mob-menu is open
+    // addEventListener to the buy-button and menu-items while the mob-menu is open and close it for the navigation
     !isMenuOpen && mobMenuList.addEventListener('click', onMenuItemClick);
+    !isMenuOpen && mobMenuBuyNowBtn.addEventListener('click', () => closeMenu());
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
