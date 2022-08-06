@@ -13,9 +13,7 @@
   const onMenuItemClick = (e) => {
     if (e.target.nodeName !== 'A') {
       return;
-    } else {
-      closeMenu();
-     }
+    } else closeMenu();
   }
 
   const toggleMenu = () => {
@@ -29,16 +27,15 @@
     //   : 'enableBodyScroll';
     // bodyScrollLock[scrollLockMethod](document.body);
 
-    // addEventListener to the buy-button and menu-items while the mob-menu is open and close it for the navigation
+    // addEventListener to the buy-button and menu-items while the mob-menu is open, and close it for the navigation
     !isMenuOpen && mobMenuList.addEventListener('click', onMenuItemClick);
-    !isMenuOpen && mobMenuBuyNowBtn.addEventListener('click', () => closeMenu());
+    !isMenuOpen && mobMenuBuyNowBtn.addEventListener('click', closeMenu);
   };
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
 
-  // Закрываем мобильное меню на более широких экранах
-  // в случае изменения ориентации устройства.
+  // Close mob menu during the screen rotation 
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
